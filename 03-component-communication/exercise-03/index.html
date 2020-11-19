@@ -29,7 +29,7 @@
     background-color: #104436;
     border: 2px solid #08221b;
     border-radius: 2px;
-    color: white; 
+    color: white;
     cursor: pointer;
     font-size: 1em;
     padding: 0.5em 1em;
@@ -54,9 +54,9 @@
   </main>
 
   <script>
-    const list = document.querySelector('to-do-list');
+    const toDoList = document.querySelector('to-do-list');
     import('./to-do-list.js').then(() => {
-      list.todos = [
+      toDoList.todos = [
         { text: 'Read a book', checked: true },
         { text: 'Finish assignments', checked: false },
         { text: 'Walk the dog', checked: false },

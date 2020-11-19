@@ -3,34 +3,39 @@
 <html>
 
 <head>
-  <title>Custom Elements - Exercise 1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="index.js"></script>
+    <title>Web Components</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <style>
 
-  .light-switch {
-      display: block;
-      height: 100px;
-      width: 100px;
-      border: 1px solid #333;
-      border-radius: 50%;
-      background-color: grey;
-  }
+    .light-bulb {
+        display: block;
+        height: 100px;
+        width: 100px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        background-color: grey;
+    }
+
+    .light-bulb--on {
+        background-color: yellow;
+    }
+
 </style>
 
 <body>
+    <header>
+        <h1>Light Switch</h1>
+    </header>
 
-  <header>
-    <h1>Custom Elements - Exercise 1</h1>
-  </header>
+    <main>
 
-  <main>
-  
+        <light-switch></light-swithc>
 
-  </main>
+    </main>
 
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
