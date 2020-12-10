@@ -21,18 +21,28 @@
  * 2. De payload van het action object is standaard 1
  * 3. De gebruiker kan een andere waarde als payload mee geven
  */
-
+const increment = (amount = 1) => {
+  return {
+    type: 'INCREMENT',
+    payload: amount
+  }
+}
 
 /**
  * `decrement`
- * Als deze action gedispatched wordt verlaagt de state met een standaard
+ * Als deze action gedispatched wordt verlaagt de state op met een standaard 
  * waarde van 1, deze waarde is door de gebruiker van de action aan te passen
  * 
  * 1. Deze functie returnt een action object met als type 'DECREMENT'
  * 2. De payload van het action object is standaard 1
  * 3. De gebruiker kan een andere waarde als payload mee geven
  */
-
+const decrement = (amount = 1) => {
+  return {
+    type: 'DECREMENT',
+    payload: amount
+  }
+}
 
 /**
  * `reset`
@@ -41,7 +51,11 @@
  * 
  * 1. Deze functie returnt een action object met als type 'RESET'
  */
-
+const reset = () => {
+  return {
+    type: 'RESET'
+  }
+}
 
 export default {
   increment,

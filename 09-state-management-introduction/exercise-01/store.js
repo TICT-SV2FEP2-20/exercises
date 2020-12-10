@@ -22,7 +22,7 @@ export default (reducer) => {
    * 
    * @returns De huidige state
    */
-
+  const getState = () => state
 
   /**
    * `dispatch`
@@ -34,7 +34,10 @@ export default (reducer) => {
    * 
    * @param {Object} action Een action object
    */
-
+  const dispatch = (action) => {
+    state = reducer(state, action)
+    listeners.forEach(listener => listener())
+  }
 
   /**
    * `subscribe`
@@ -42,7 +45,9 @@ export default (reducer) => {
    * 
    * @param {Function} listener Een function die gecalled moet worden
    */
-  
+  const subscribe = (listener) => {
+    listeners.push(listener)
+  }
 
   dispatch({})
 

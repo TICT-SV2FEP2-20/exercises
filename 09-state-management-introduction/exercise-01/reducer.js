@@ -12,3 +12,15 @@ const defaultState = 0
  * gereturnt wordt (een nummer) dat voldoet aan de beschrijving van de action.
  * Als er onbekende action type wordt mee gegeven, return dan de huisige state.
  */
+export default (state = defaultState, action) => {
+  switch (action.type) {
+    case 'INCREMENT': 
+      return state + action.payload;
+    case 'DECREMENT':
+      return state - action.payload;
+    case 'RESET':
+      return defaultState
+    default:
+      return state
+  }
+}
