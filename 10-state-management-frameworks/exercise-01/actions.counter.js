@@ -1,25 +1,7 @@
-const increment = (amount = 1) => {
-  return {
-    type: 'counter/INCREMENT',
-    payload: amount
-  }
-}
-
-const decrement = (amount = 1) => {
-  return {
-    type: 'counter/DECREMENT',
-    payload: amount
-  }
-}
-
-const reset = () => {
-  return {
-    type: 'counter/RESET'
-  }
-}
+import {createAction} from '@reduxjs/toolkit';
 
 export default {
-  increment,
-  decrement,
-  reset,
-}
+    increment: createAction('counter/increment', (amount) => ({payload: amount ?? 1})),
+    decrement: createAction('counter/decrement', (amount) => ({payload: amount ?? 1})),
+    reset: createAction('counter/reset')
+};

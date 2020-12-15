@@ -61,13 +61,23 @@
     <button data-menu-close>Close</button>
   </aside>
 
+  <script>
+    window.process = {
+      env: {
+        NODE_ENV: 'production'
+      }
+    };
+  </script>
+
   <script type="module">
-    import createStore from './store.js'
+    import { configureStore } from '@reduxjs/toolkit';
     import reducer from './reducer.js'
     import counter from './actions.counter.js'
     import menu from './actions.menu.js'
-
-    const store = createStore(reducer)
+    
+    const store = configureStore({
+      reducer: reducer
+    })
     
     function render() {
       const state = store.getState()

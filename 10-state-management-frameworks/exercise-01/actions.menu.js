@@ -1,16 +1,6 @@
-const open = () => {
-  return {
-    type: 'menu/OPEN'
-  }
-}
-
-const close = () => {
-  return {
-    type: 'menu/CLOSE'
-  }
-}
+import {createAction} from '@reduxjs/toolkit';
 
 export default {
-  open,
-  close,
-}
+    open: createAction('menu/open'),
+    close: createAction('menu/close')
+};

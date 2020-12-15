@@ -1,4 +1,4 @@
-import { createSlice } from 'https://cdn.skypack.dev/@reduxjs/toolkit@^1.2.3';
+import { createSlice } from '@reduxjs/toolkit';
 
 const { actions, reducer } = createSlice({
   name: 'counter',

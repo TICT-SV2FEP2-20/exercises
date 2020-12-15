@@ -61,8 +61,16 @@
     <button data-menu-close>Close</button>
   </aside>
 
+  <script>
+    window.process = {
+      env: {
+        NODE_ENV: 'production'
+      }
+    };
+  </script>
+
   <script type="module">
-    import { configureStore } from 'https://cdn.skypack.dev/@reduxjs/toolkit@^1.2.3';
+    import { configureStore } from '@reduxjs/toolkit';
     import reducer from './reducer.js'
     import { actions as counter } from './counter.js'
     import { actions as menu } from './menu.js'
