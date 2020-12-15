@@ -6,7 +6,7 @@ import {
   addTodo,
   removeTodo,
   updateTodoStatus
-} from './redux/actions.js';
+} from './redux/todo.js';
 
 // Connect the component to the Redux store
 class TodoApp extends connect(store)(LitElement) {

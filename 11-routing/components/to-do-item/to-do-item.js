@@ -52,7 +52,7 @@ class TodoItem extends LitElement {
             <input 
                 type="checkbox" 
                 .checked=${this.checked}
-                @change=${() => this._fire('onToggle', this)}>
+                @change=${() => this._fire('onToggle', this.id)}>
             <label class=${this.checked ? 'completed' : ''}>${this.text}</label>
             <button @click=${() => this._fire('onRemove', this.id)}>❌</button>
         </li>
